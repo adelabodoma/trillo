@@ -211,7 +211,7 @@
 .overview {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-grey-light-3);
+    border-bottom: var(--line);
 
 
     &__heading {
@@ -311,3 +311,88 @@
     }
 }
 
+////////////////////////////////////////
+// DESCRIPTION
+.description {
+    flex: 0 0 60%;
+
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+}
+
+
+////////////////////////////////////////
+// PARAGRAPH
+.paragraph {
+    &:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+}
+
+
+////////////////////////////////////////
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+    
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: 1rem;
+
+        // FOR OLD BROWSER
+
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        // FOR NEWER BROWSERS
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+    }
+}
+
+////////////////////////////////////////
+// RECOMMEND
+.recommend {
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+        color: var(--color-grey-dark-3);
+    }
+    
+    &__friends {
+        
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child){
+            margin-right: -1.75rem;
+        }
+    }
+}
