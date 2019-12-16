@@ -297,6 +297,10 @@
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width: $dp-meduim){
+            margin-left: auto;
+        }
+
         @media only screen and (max-width: $dp-small){
             margin-left: auto;
         }
@@ -415,12 +419,18 @@
 
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .list__item {
     flex: 0 0 50%;
     margin-bottom: .7rem;
-    
+
+    @media only screen and (max-width: $dp-small){
+        flex: 0 0 100%;    
+        margin-bottom: .9rem;
+    }
+
     &::before {
         content: "";
         display: inline-block;
