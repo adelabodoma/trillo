@@ -226,6 +226,9 @@ body {
     font-size: 1.2rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__location {
+        margin-left: auto; } }
     @media only screen and (max-width: 31.25em) {
       .overview__location {
         margin-left: auto; } }
@@ -300,6 +303,10 @@ body {
 .list__item {
   flex: 0 0 50%;
   margin-bottom: .7rem; }
+  @media only screen and (max-width: 31.25em) {
+    .list__item {
+      flex: 0 0 100%;
+      margin-bottom: .9rem; } }
   .list__item::before {
     content: "";
     display: inline-block;
